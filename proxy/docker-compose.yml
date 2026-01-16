@@ -1,0 +1,17 @@
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'   # Public HTTP (for Let's Encrypt validation)
+      - '443:443' # Public HTTPS
+      - '81:81'   # Admin UI Port
+    volumes:
+      - ${DATA_PATH}/routing:/data
+      - ${DATA_PATH}/letsencrypt:/etc/letsencrypt
+    networks:
+    - proxy_network
+
+networks:
+  proxy_network:
+    external: true    
