@@ -6,7 +6,7 @@ Target:
 - secure access using internet
 
 ## Two deployments
-Use a script to start the docker compose image [run](./run.bash) with two options:
+Use a script to start the docker compose image [run_openhab](./run_openhab.bash) with two options:
 - the deployment envronment [home|church]
 - the action for the docker compose image [start|stop|status]
 
@@ -46,3 +46,13 @@ Verify there is a proxy_network
 ```bash
 docker network create proxy_network
 ```
+
+Start the proxy [run_proxy](./run_proxy.bash)
+
+Configure the proxy
+
+### Proxy hosts
+![proxy host](./images/proxy_hosts.png)
+
+### Certificates
+![certificates](./images/proxy_ssl.png)
