@@ -6,7 +6,7 @@ services:
   openhab:
     image: openhab/openhab:5.1.1 # Or your preferred version (4.1.0)
     container_name: openhab-${SITE_NAME}
-    restart: always
+    restart: "no" # "unless-stopped" # try to restart on reboot or crash
     ports:
       - "${HTTP_PORT}:8080"
       - "${HTTPS_PORT}:8443"
