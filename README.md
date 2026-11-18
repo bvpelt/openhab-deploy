@@ -49,7 +49,8 @@ docker network create proxy_network
 
 Start the proxy [run_proxy](./run_proxy.bash)
 
-Configure the proxy
+## Configure the proxy
+Use http://localhost:81 and login with email, default password
 
 ### Proxy hosts
 ![proxy host](./images/proxy_hosts.png)
